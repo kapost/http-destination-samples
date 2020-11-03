@@ -113,7 +113,7 @@ below.
 
 ```json
 {
-	"error": "Authentication error. Invalid credentials."
+  "error": "Authentication error. Invalid credentials."
 }
 ```
 
@@ -285,11 +285,11 @@ is then included in the `authentication` hash of the payloads of other actions.
 
 ```json
 {
-	"authentication": {
-		"metadata": {
-			"uniqueid": "dc42"
-		}
-	}
+  "authentication": {
+    "metadata": {
+      "uniqueid": "dc42"
+    }
+  }
 }
 ```
 
@@ -319,24 +319,24 @@ hasn't been previously published.
     "updated_at": "2020-11-03T10:30:52Z",
     "created_at": "2020-11-03T10:30:01Z",
     "file": {
-		"url": "https://asseturl/asset.pdf",
-		"file_name": "asset.pdf"
+      "url": "https://asseturl/asset.pdf",
+      "file_name": "asset.pdf"
     },
     "attachments": [
-		{
-			"url": "https://asseturl/attachment.pdf",
-			"file_name": "attachment.pdf"
-		}
+      {
+        "url": "https://asseturl/attachment.pdf",
+        "file_name": "attachment.pdf"
+      }
     ],
     "media": [
-		{
-			"url": "https://asseturl/image.png",
-			"file_name": "image.png"
-		},
-		{
-			"url": "https://asseturl/video.mp4",
-			"file_name": "video.mp4"
-		}
+      {
+        "url": "https://asseturl/image.png",
+        "file_name": "image.png"
+      },
+      {
+        "url": "https://asseturl/video.mp4",
+        "file_name": "video.mp4"
+      }
     ],
     "custom_fields": {
       "hello_world_select": [
@@ -350,13 +350,13 @@ hasn't been previously published.
       "field_name": "test_content_type"
     },
     "idea": {
-		"id": "5c536610480a0c68ee000000"
+      "id": "5c536610480a0c68ee000000"
     },
     "initiatives": [
-		{
-			"id": "5d536610480a0e68ee000000",
-			"title": "My Initiative"
-		}
+    {
+      "id": "5d536610480a0e68ee000000",
+      "title": "My Initiative"
+    }
     ],
     "author": {
       "id": "5c536610480a0e68ee000000",
@@ -403,10 +403,10 @@ during the publishing process.
 
 ```json
 {
-	"location": {
-		"id": "locationid",
-		"name": "My Location"
-	}
+  "location": {
+    "id": "locationid",
+    "name": "My Location"
+  }
 }
 ```
 
@@ -416,9 +416,9 @@ or not.
 
 ```json
 {
-	"action": {
-		"draft": true
-	}
+  "action": {
+    "draft": true
+  }
 }
 ```
 
@@ -465,11 +465,11 @@ The full content payload has been omitted for brevity.
 ```json
 {
   "action": {
-	"external_id": "abc33"
+    "external_id": "abc33"
   },
   "metadata": {
-	  "external_id": "abc33",
-	  "published_url": "https://domain.com/content"
+    "external_id": "abc33",
+    "published_url": "https://domain.com/content"
   },
   "content": {
     "id": "5fa13129480a0e3ca3db3a4f",
@@ -511,7 +511,7 @@ returning an error with the HTTP status code set to 405.
 
 ```json
 {
-	"error": "Action is not supported by this endpoint"
+  "error": "Action is not supported by this endpoint"
 }
 ```
 

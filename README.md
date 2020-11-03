@@ -505,7 +505,7 @@ Failing to return these mandatory attributes, will result in an `Unexpected erro
 ```
 
 #### Unhandled or unsupported "future" actions
-New "actions" might be added in the future, therefore in order to _fuuture
+New "actions" might be added in the future, therefore in order to _future
 proof_ your integration, you should handle any _unknown_ actions by simply
 returning an error with the HTTP status code set to 405.
 

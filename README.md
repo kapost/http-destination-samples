@@ -250,7 +250,8 @@ content they are working on.
 ```json
 {
   "capabilities": {
-    "html": true
+    "html": true,
+    "locations": true
   },
   "locations": [
     {

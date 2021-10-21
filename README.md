@@ -437,6 +437,8 @@ Failing to return these mandatory attributes, will result in an `Unexpected erro
 }
 ```
 
+The `external_id` attribute should be returned as a `string`.
+
 In addition, an `embed_code` attribute can also be returned. This `embed code`
 is then displayed to the user together with the published url.
 

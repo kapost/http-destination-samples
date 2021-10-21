@@ -226,6 +226,7 @@ endpoint.
 | Capability | Description |
 | ---------- | ----------- |
 | any\_file | Available as a primary destination for Content Types with an Any File body type |
+| document | Available as a primary destination for Content Types with a Document body type |
 | html | Available as a primary destination for Content Types with an HTML body type |
 | social\_media | Available as a primary destination for Content Types with a Social Media body type |
 | locations | Enables support for locations. Learn more below. |

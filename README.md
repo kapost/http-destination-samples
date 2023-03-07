@@ -229,9 +229,13 @@ endpoint.
 | document | Available as a primary destination for Content Types with a Document body type |
 | html | Available as a primary destination for Content Types with an HTML body type |
 | social\_media | Available as a primary destination for Content Types with a Social Media body type |
+| social\_media\_external\_schedule | Enables support for external scheduling. Learn more below. |
 | locations | Enables support for locations. Learn more below. |
 | draft | Enables support for publishing as draft. Learn more below. |
 | tracking\_url | Enables support for auto-generated Bit.ly tracking URL. Learn more below. |
+
+If `social_media_external_schedule` is enabled then it is assumed that the endpoint implements
+external scheduling for content types with a social media body type.
 
 If `draft` is enabled then users will have the ability to publish/republish as draft
 as well as publish/republish as live.
@@ -310,6 +314,8 @@ hasn't been previously published.
 ```json
 {
   "action": {
+    "draft": true,
+    "scheduled_date": "2023-03-07 18:11:00 UTC"
   },
   "metadata": {
   },
@@ -420,6 +426,22 @@ or not.
 {
   "action": {
     "draft": true
+  }
+}
+```
+
+If `social_media_external_schedule` is supported, then the `action` hash of the payload will
+also contain a `scheduled_date` attribute if the user decided to do a scheduled publish.
+
+The date is in UTC.
+
+If the user decided not to schedule, then there will be no `scheduled_date` attribute in the payload.
+
+```json
+{
+  "action": {
+    "draft": true,
+    "scheduled_date": "2023-03-07 18:11:00 UTC"
   }
 }
 ```

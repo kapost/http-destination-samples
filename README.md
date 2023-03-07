@@ -229,7 +229,7 @@ endpoint.
 | document | Available as a primary destination for Content Types with a Document body type |
 | html | Available as a primary destination for Content Types with an HTML body type |
 | social\_media | Available as a primary destination for Content Types with a Social Media body type |
-| social\_media\_external\_schedule | Enables support for external scheduling. Learn more below. |
+| social\_media\_external\_schedule | Enables support for external scheduling for Content Types with a Social Media body type. Learn more below. |
 | locations | Enables support for locations. Learn more below. |
 | draft | Enables support for publishing as draft. Learn more below. |
 | tracking\_url | Enables support for auto-generated Bit.ly tracking URL. Learn more below. |

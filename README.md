@@ -328,22 +328,30 @@ hasn't been previously published.
     "created_at": "2020-11-03T10:30:01Z",
     "file": {
       "url": "https://asseturl/asset.pdf",
-      "file_name": "asset.pdf"
+      "file_name": "asset.pdf",
+      "file_size": 1024,
+      "file_type": "application/pdf"
     },
     "attachments": [
       {
         "url": "https://asseturl/attachment.pdf",
-        "file_name": "attachment.pdf"
+        "file_name": "attachment.pdf",
+        "file_size": 1024,
+        "file_type": "application/pdf"
       }
     ],
     "media": [
       {
         "url": "https://asseturl/image.png",
-        "file_name": "image.png"
+        "file_name": "image.png",
+        "file_size": 1024,
+        "file_type": "image/png"
       },
       {
         "url": "https://asseturl/video.mp4",
-        "file_name": "video.mp4"
+        "file_name": "video.mp4",
+        "file_size": 1024,
+        "file_type": "video/mp4"
       }
     ],
     "custom_fields": {

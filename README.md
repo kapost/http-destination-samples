@@ -45,6 +45,14 @@ signature secret to be used when "computing" the signature.
 | SHA256 | Compute SHA256 signature |
 | Secret | Secret to compute the SHA1 or SHA256 |
 
+#### Custom Header
+The custom header allows you to configure a custom header that is sent along
+with all requests made to the defined endpoint.
+
+The header name must be in the format "X-Your-Header-Name". Configuring a custom
+header is optional and should only be used when there's an actual need for sending
+along some additional metadata with every request.
+
 #### Endpoint
 The endpoint lets you define a canonical HTTP endpoint that the HTTP destination
 will interact with and make requests to.

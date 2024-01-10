@@ -231,6 +231,7 @@ endpoint.
 }
 ```
 
+###### Capabilily Table
 | Capability | Description |
 | ---------- | ----------- |
 | any\_file | Available as a primary destination for Content Types with an Any File body type |
@@ -241,6 +242,8 @@ endpoint.
 | locations | Enables support for locations. Learn more below. |
 | draft | Enables support for publishing as draft. Learn more below. |
 | tracking\_url | Enables support for auto-generated Bit.ly tracking URL. Learn more below. |
+| embed\_code | Enables support for embed code. Learn more below. |
+| published\_message | Enables support for published message. Learn more below. |
 
 If `social_media_external_schedule` is enabled then it is assumed that the endpoint implements
 external scheduling for content types with a social media body type.
@@ -480,7 +483,32 @@ Failing to return these mandatory attributes, will result in an `Unexpected erro
 The `external_id` attribute should be returned as a `string`.
 
 In addition, an `embed_code` attribute can also be returned. This `embed code`
-is then displayed to the user together with the published url.
+is then displayed to the user together with the published url. In order for the
+`embed code` to display, the endpoint must report that it supports the
+`embed\_code` capability. See the `Capability Table` above for more information.
+
+It is also possible to return `published_message` and `published_message_title`
+which will be shown to the user in the UI in a similar fashion to the
+`published_url`.
+
+```json
+{
+  "metadata": {
+    "external_id": "abc33",
+    "published_url": "https://domain.com/content",
+    "published_message": "This is a message",
+    "published_message_label": "Published Message"
+  }
+}
+```
+
+Please note that the label and message show up **only** if the last `publish` or
+`republish` action has been succesful. In addition, the label will be truncated
+to 32 characters and the message to 1024 characters when displayed to the user.
+
+In order for the `published_message` to be picked up it is necessary for the
+endpoint to report the `published_message` capability. See the `Capability
+Table` above for more information.
 
 Any additional attributes included in the `metadata` will be persisted and
 sent back in the request payload during the republish action.
